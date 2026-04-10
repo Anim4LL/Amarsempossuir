@@ -4,21 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amar sem possuir | Livro</title>
-  <meta name="description" content="Página oficial do livro Amar sem possuir — limite, vínculo, respeito e maturidade nas relações humanas." />
+  <meta name="description" content="Página oficial do livro Amar sem possuir — reflexões sobre amor, vínculo, limite, liberdade e maturidade nas relações humanas." />
   <style>
     :root {
-      --bg: #0f0b09;
-      --bg-soft: #19120e;
+      --bg: #0b0908;
+      --bg-2: #14100e;
       --panel: rgba(255,255,255,0.045);
-      --panel-strong: rgba(255,255,255,0.065);
-      --line: rgba(255,255,255,0.11);
-      --text: #f2e8dc;
-      --muted: #ccb59b;
-      --soft: #a18464;
-      --accent: #d9b68a;
+      --panel-2: rgba(255,255,255,0.06);
+      --line: rgba(255,255,255,0.10);
+      --text: #f2e8dd;
+      --muted: #c5b09a;
+      --accent: #d4b08a;
+      --accent-soft: #8e6d53;
       --shadow: 0 24px 70px rgba(0,0,0,0.45);
-      --max: 1180px;
       --radius: 28px;
+      --max: 1180px;
     }
 
     * { box-sizing: border-box; }
@@ -28,10 +28,10 @@
       font-family: Georgia, "Times New Roman", serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top right, rgba(217,182,138,0.10), transparent 22%),
-        radial-gradient(circle at left center, rgba(140,96,58,0.12), transparent 18%),
-        linear-gradient(180deg, #140f0c 0%, #0d0a08 100%);
-      line-height: 1.65;
+        radial-gradient(circle at top right, rgba(212,176,138,0.10), transparent 22%),
+        radial-gradient(circle at left center, rgba(105,72,51,0.12), transparent 18%),
+        linear-gradient(180deg, #100c0a 0%, #080707 100%);
+      line-height: 1.68;
       overflow-x: hidden;
     }
 
@@ -41,9 +41,9 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.28)),
+        linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.32)),
         repeating-linear-gradient(90deg, rgba(255,255,255,0.012), rgba(255,255,255,0.012) 1px, transparent 1px, transparent 5px);
-      opacity: 0.45;
+      opacity: 0.42;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -59,9 +59,9 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
       backdrop-filter: blur(14px);
-      background: rgba(10, 8, 7, 0.62);
+      background: rgba(11, 9, 8, 0.66);
       border-bottom: 1px solid var(--line);
     }
 
@@ -91,62 +91,38 @@
     .nav a:hover { color: var(--text); }
 
     .hero {
-      padding: 72px 0 42px;
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      padding: 48px 0 64px;
+      background-image:
+        linear-gradient(90deg, rgba(8,7,7,0.92) 0%, rgba(8,7,7,0.76) 42%, rgba(8,7,7,0.52) 72%, rgba(8,7,7,0.78) 100%),
+        url('assets/banner-amar-sem-possuir.jpg');
+      background-size: cover;
+      background-position: center center;
+      border-bottom: 1px solid var(--line);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 44px;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 42px;
       align-items: center;
-    }
-
-    .book-frame {
-      position: relative;
-      padding: 26px;
-      border-radius: 34px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .book-frame::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top center, rgba(217,182,138,0.18), transparent 35%);
-      pointer-events: none;
-    }
-
-    .book-stage {
-      position: relative;
-      padding: 20px;
-      border-radius: 22px;
-      background: linear-gradient(180deg, #241914 0%, #15100d 100%);
-      border: 1px solid rgba(255,255,255,0.08);
-      min-height: 100%;
-    }
-
-    .book-cover {
-      width: min(100%, 430px);
-      margin: 0 auto;
-      border-radius: 12px;
-      box-shadow: 0 24px 55px rgba(0,0,0,0.42);
     }
 
     .eyebrow {
       display: inline-block;
-      margin-bottom: 14px;
-      color: var(--accent);
-      font-size: 0.83rem;
-      letter-spacing: 0.13em;
+      margin-bottom: 16px;
+      font-size: 0.84rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
+      color: var(--accent);
     }
 
     h1 {
       margin: 0 0 16px;
-      font-size: clamp(2.9rem, 6vw, 5.3rem);
+      font-size: clamp(3rem, 6vw, 5.5rem);
       line-height: 0.95;
       font-weight: normal;
       text-wrap: balance;
@@ -154,33 +130,34 @@
 
     .subtitle {
       margin: 0 0 18px;
-      font-size: clamp(1.08rem, 2vw, 1.46rem);
+      font-size: clamp(1.05rem, 2vw, 1.46rem);
       color: var(--muted);
       max-width: 680px;
     }
 
     .lead {
       margin: 0 0 26px;
-      font-size: 1.05rem;
-      color: #e6d8c8;
-      max-width: 740px;
+      font-size: 1.06rem;
+      color: #e8dbcc;
+      max-width: 730px;
     }
 
     .hero-quote {
-      margin: 18px 0 30px;
+      margin: 20px 0 28px;
       padding: 22px 24px;
       border-left: 3px solid var(--accent);
       border-radius: 0 18px 18px 0;
-      background: rgba(255,255,255,0.035);
+      background: rgba(255,255,255,0.04);
       color: #f5ede4;
-      font-size: clamp(1.12rem, 1.7vw, 1.42rem);
+      font-size: clamp(1.12rem, 1.8vw, 1.42rem);
+      max-width: 780px;
     }
 
     .hero-quote small {
       display: block;
       margin-top: 10px;
-      font-size: 0.92rem;
       color: var(--muted);
+      font-size: 0.92rem;
     }
 
     .button-row {
@@ -198,34 +175,54 @@
       padding: 0 22px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.05);
       color: var(--text);
       font-size: 0.98rem;
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
     .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
-      background: linear-gradient(180deg, var(--accent), #b3895c);
-      color: #1d140c;
+      background: linear-gradient(180deg, var(--accent), #b4885b);
+      color: #1d140d;
       border-color: transparent;
       font-weight: bold;
     }
 
+    .hero-cover-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-cover-card {
+      width: min(100%, 430px);
+      padding: 22px;
+      border-radius: 32px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-cover-card img {
+      border-radius: 14px;
+      box-shadow: 0 24px 58px rgba(0,0,0,0.48);
+    }
+
     .section {
-      padding: 26px 0;
+      padding: 62px 0 18px;
     }
 
     .section-title {
       margin: 0 0 12px;
-      font-size: clamp(1.85rem, 3vw, 2.5rem);
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
       font-weight: normal;
     }
 
     .section-intro {
-      margin: 0 0 24px;
-      max-width: 820px;
+      margin: 0 0 26px;
+      max-width: 840px;
       color: var(--muted);
     }
 
@@ -233,6 +230,13 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: stretch;
     }
 
     .card {
@@ -254,24 +258,62 @@
       font-size: 0.99rem;
     }
 
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
+    .feature-image {
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      min-height: 460px;
+      display: flex;
+      align-items: flex-end;
     }
 
-    .excerpt-block {
-      padding: 24px;
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+    .feature-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.72) saturate(0.9);
+    }
+
+    .feature-overlay {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 26px;
+      background: linear-gradient(180deg, rgba(8,7,7,0.05), rgba(8,7,7,0.72));
+    }
+
+    .feature-overlay p {
+      margin: 0;
+      color: #f4ebe2;
+      font-size: clamp(1.16rem, 2vw, 1.5rem);
+      line-height: 1.42;
+    }
+
+    .feature-overlay small {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .mockup-block {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 22px;
+      align-items: center;
+      padding: 22px;
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.03));
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
     }
 
-    .excerpt-block p {
-      margin: 0;
-      color: #efe3d3;
-      font-size: 1.04rem;
+    .mockup-block img {
+      width: 100%;
+      border-radius: 22px;
+      box-shadow: 0 20px 52px rgba(0,0,0,0.42);
     }
 
     .list {
@@ -282,42 +324,35 @@
     .list li + li { margin-top: 10px; }
 
     .cta-wrap {
-      margin: 20px 0 56px;
-      padding: 30px;
-      border-radius: 32px;
+      margin: 24px 0 56px;
+      padding: 32px;
+      border-radius: 34px;
       border: 1px solid var(--line);
       background:
-        radial-gradient(circle at top left, rgba(217,182,138,0.14), transparent 28%),
-        linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.03));
+        radial-gradient(circle at top left, rgba(212,176,138,0.14), transparent 28%),
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
       box-shadow: var(--shadow);
       text-align: center;
     }
 
     .cta-wrap p {
-      margin: 0 auto 22px;
       max-width: 760px;
+      margin: 0 auto 20px;
       color: var(--muted);
     }
 
-    .buy-box {
-      margin-top: 18px;
+    .hotmart-area {
       display: flex;
       flex-direction: column;
-      gap: 16px;
       align-items: center;
-      justify-content: center;
-    }
-
-    .direct-link {
-      font-size: 0.95rem;
-      color: var(--soft);
-      word-break: break-all;
+      gap: 16px;
+      margin-top: 18px;
     }
 
     .hotmart-fb {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
     .hotmart-fb img {
@@ -325,25 +360,32 @@
       max-width: 100%;
       height: auto;
       border-radius: 14px;
-      box-shadow: 0 16px 38px rgba(0,0,0,0.35);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    }
+
+    .direct-link {
+      color: var(--accent-soft);
+      font-size: 0.95rem;
+      word-break: break-all;
     }
 
     footer {
-      padding: 26px 0 48px;
+      padding: 24px 0 48px;
       color: #b49f89;
       font-size: 0.92rem;
     }
 
     .small-note {
+      margin-top: 10px;
       color: #ad977f;
       font-size: 0.88rem;
-      margin-top: 10px;
     }
 
     @media (max-width: 980px) {
       .hero-grid,
       .grid-3,
-      .split {
+      .split,
+      .mockup-block {
         grid-template-columns: 1fr;
       }
 
@@ -352,13 +394,18 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .hero {
+        min-height: auto;
+        background-position: 62% center;
+      }
     }
 
     @media (max-width: 640px) {
-      .hero { padding-top: 48px; }
       h1 { font-size: clamp(2.4rem, 13vw, 4rem); }
       .button-row, .btn { width: 100%; }
       .btn { min-height: 52px; }
+      .feature-image { min-height: 360px; }
     }
   </style>
 </head>
@@ -368,29 +415,22 @@
       <div class="brand">Travessias Humanas</div>
       <nav class="nav">
         <a href="#sobre">Sobre</a>
-        <a href="#trecho">Trecho</a>
-        <a href="#temas">Temas</a>
+        <a href="#trechos">Trechos</a>
+        <a href="#livro">O livro</a>
         <a href="#comprar">Comprar</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero container">
-      <div class="hero-grid">
-        <div class="book-frame">
-          <div class="book-stage">
-            <img class="book-cover" src="capa-amar-sem-possuir.jpg" alt="Capa do livro Amar sem possuir" />
-          </div>
-        </div>
-
+    <section class="hero">
+      <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Livro autoral</span>
+          <span class="eyebrow">Página oficial do livro</span>
           <h1>Amar sem possuir</h1>
           <p class="subtitle">Limite, vínculo, respeito e maturidade nas relações humanas</p>
           <p class="lead">
-            Uma página com atmosfera densa, madura e silenciosa para apresentar um livro sobre afeto,
-            limite, convivência, frustração, respeito e a coragem de não transformar o outro em extensão das nossas faltas.
+            Um livro de tom melancólico, humano e maduro sobre aquilo que existe entre amor, limite, convivência, frustração, silêncio e respeito. Não para simplificar relações. Para olhá-las com mais verdade.
           </p>
 
           <div class="hero-quote">
@@ -399,120 +439,130 @@
           </div>
 
           <div class="button-row">
-            <a class="btn btn-primary" href="https://go.hotmart.com/U105322060B?dp=1" target="_blank" rel="noopener">Comprar agora</a>
-            <a class="btn" href="#trecho">Ler um trecho</a>
+            <a class="btn btn-primary" href="https://go.hotmart.com/U105322060B?dp=1" target="_blank" rel="noopener">Comprar na Hotmart</a>
+            <a class="btn" href="#trechos">Ler trechos</a>
+          </div>
+        </div>
+
+        <div class="hero-cover-wrap">
+          <div class="hero-cover-card">
+            <img src="assets/capa-amar-sem-possuir.jpg" alt="Capa do livro Amar sem possuir" />
           </div>
         </div>
       </div>
     </section>
 
     <section id="sobre" class="section container">
-      <h2 class="section-title">Um livro sobre convivência real</h2>
+      <h2 class="section-title">Uma obra sobre afeto sem domínio</h2>
       <p class="section-intro">
-        Este não é um livro sobre fórmulas prontas para fazer relações darem certo. É um livro sobre aquilo que adoece,
-        amadurece, exige escuta e pede verdade quando duas pessoas tentam construir proximidade sem desaparecer dentro dela.
+        Este livro atravessa a zona mais delicada das relações humanas: o espaço em que amor, medo, presença, invasão, cuidado, frustração e silêncio começam a se misturar. A proposta não é oferecer respostas rápidas, mas devolver espessura ao que quase sempre é tratado com simplificação.
       </p>
 
       <div class="grid-3">
         <article class="card">
-          <h3>Sem romantização vazia</h3>
+          <h3>Melancolia madura</h3>
           <p>
-            Um texto para quem procura profundidade humana, reflexão séria e uma linguagem madura sobre amor, vínculo, limite e presença.
+            Um clima mais sóbrio, íntimo e emocionalmente contido, para leitores que buscam densidade em vez de excesso.
           </p>
         </article>
         <article class="card">
-          <h3>Sem autoajuda barata</h3>
+          <h3>Sem romantização pobre</h3>
           <p>
-            Nada de slogans fáceis. O livro trabalha conflito, frustração, cuidado, respeito e convivência de forma honesta e intelectual.
+            O livro não idealiza o vínculo. Ele observa o que amadurece, o que adoece e o que precisa de limite para continuar digno.
           </p>
         </article>
         <article class="card">
-          <h3>Com atmosfera e densidade</h3>
+          <h3>Valor autoral</h3>
           <p>
-            Ideal para leitores que valorizam obras sensíveis, silenciosas, autorais e emocionalmente contidas, mas profundamente humanas.
+            Uma apresentação com atmosfera literária, linguagem premium e presença visual compatível com uma obra sensível e contemporânea.
           </p>
         </article>
       </div>
     </section>
 
-    <section id="trecho" class="section container">
-      <h2 class="section-title">Trechos que sustentam o livro</h2>
+    <section id="trechos" class="section container">
+      <h2 class="section-title">Trechos em imagem</h2>
       <p class="section-intro">
-        O coração do livro está na diferença entre cuidar e possuir, entre presença e invasão, entre afeto e controle.
+        As artes abaixo expandem visualmente o clima do livro: silêncio, responsabilidade, limite, maturidade e presença sem posse.
       </p>
 
       <div class="split">
-        <div class="excerpt-block">
-          <p>
-            “Amar sem transformar o outro em extensão das nossas faltas. Amar sem exigir disponibilidade irrestrita. Amar sem chamar de cuidado aquilo que, no fundo, é medo de perder.”
-          </p>
-        </div>
-        <div class="excerpt-block">
-          <p>
-            “Limite não é violência. Violência é humilhar, esmagar, impor medo como linguagem principal. Limite, ao contrário, pode ser forma de responsabilidade.”
-          </p>
-        </div>
+        <article class="card feature-image">
+          <img src="assets/trecho-01.jpg" alt="Arte com trecho do livro" />
+          <div class="feature-overlay">
+            <p>“Amar sem transformar o outro em extensão das nossas faltas.”</p>
+            <small>Trecho do livro</small>
+          </div>
+        </article>
+
+        <article class="card feature-image">
+          <img src="assets/trecho-02.jpg" alt="Arte com trecho limite não é violência" />
+          <div class="feature-overlay">
+            <p>“Limite não é violência.”</p>
+            <small>Trecho do livro</small>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="temas" class="section container">
-      <h2 class="section-title">Temas abordados</h2>
-      <div class="split">
-        <article class="card">
-          <ul class="list">
-            <li>Conflito não nasce do nada</li>
-            <li>O outro nem sempre está contra você</li>
-            <li>Limite não é violência</li>
-            <li>Obediência não é confiança</li>
+    <section id="livro" class="section container">
+      <h2 class="section-title">O livro como presença</h2>
+      <p class="section-intro">
+        Um mockup editorial para reforçar a sensação de obra autoral, sensível e de alto valor percebido.
+      </p>
+
+      <div class="mockup-block">
+        <img src="assets/mockup-livro.jpg" alt="Mockup editorial do livro Amar sem possuir" />
+        <div>
+          <p class="lead" style="margin-top:0;">
+            <strong>Amar sem possuir</strong> não foi pensado como um produto de impulso, mas como um livro para permanecer. Um texto sobre presença, frustração, responsabilidade, leitura do outro e maturidade relacional.
+          </p>
+          <ul class="list" style="color: var(--muted);">
+            <li>Leitura adulta, sensível e intelectualmente honesta</li>
+            <li>Reflexões sobre vínculo, cuidado, limite e convivência</li>
+            <li>Apresentação visual melancólica, nobre e contemporânea</li>
+            <li>Compra digital com acesso pela Hotmart</li>
           </ul>
-        </article>
-        <article class="card">
-          <ul class="list">
-            <li>Nem todo silêncio é equilíbrio</li>
-            <li>Frustração também amadurece</li>
-            <li>Previsibilidade também é cuidado</li>
-            <li>Nem todo carinho é cuidado</li>
-          </ul>
-        </article>
+        </div>
       </div>
     </section>
 
     <section id="comprar" class="section container">
       <div class="cta-wrap">
-        <h2 class="section-title" style="margin-bottom: 10px;">Leia. Reflita. Atravesse.</h2>
+        <h2 class="section-title" style="margin-bottom:10px;">Leia. Reflita. Atravesse.</h2>
         <p>
-          Esta página já está preparada para vender apenas pela Hotmart. Mantive o clima mais escuro, denso e autoral, com foco total no livro.
+          Escolhi um tom mais melancólico e literário para esta página, com foco total no livro e na Hotmart. Sem Shopee, sem distração, sem excesso.
         </p>
 
         <div class="button-row" style="justify-content:center; margin-bottom: 8px;">
-          <a class="btn btn-primary" href="https://go.hotmart.com/U105322060B?dp=1" target="_blank" rel="noopener">Ir para a página de compra</a>
+          <a class="btn btn-primary" href="https://go.hotmart.com/U105322060B?dp=1" target="_blank" rel="noopener">Ir para a página oficial de compra</a>
         </div>
 
-        <div class="buy-box">
+        <div class="hotmart-area">
           <a onclick="return false;" href="https://pay.hotmart.com/U105322060B?checkoutMode=2" class="hotmart-fb hotmart__button-checkout">
             <img src="https://static.hotmart.com/img/btn-buy-green.png" alt="Comprar agora na Hotmart" />
           </a>
-          <div class="direct-link">Link principal: https://go.hotmart.com/U105322060B?dp=1</div>
-          <div class="small-note">Troque apenas a imagem <strong>capa-amar-sem-possuir.jpg</strong> pela sua capa real na mesma pasta do index.</div>
+          <div class="direct-link">Link alternativo de confiança: https://go.hotmart.com/U105322060B?dp=1</div>
+          <div class="small-note">Imagens usadas: banner, capa, trechos e mockup carregados da pasta assets.</div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="container">
-    <div>© Amar sem possuir • Página promocional do livro</div>
-    <div class="small-note">Estrutura pronta para GitHub Pages com integração Hotmart.</div>
+    <div>© Amar sem possuir • Página oficial do livro</div>
+    <div class="small-note">Atmosfera editorial melancólica, autoral e contemporânea.</div>
   </footer>
 
   <script type="text/javascript">
-    function importHotmart() {
-      var imported = document.createElement('script');
-      imported.src = 'https://static.hotmart.com/checkout/widget.min.js';
-      document.head.appendChild(imported);
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css';
+    function importHotmart(){ 
+      var imported = document.createElement('script'); 
+      imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
+      document.head.appendChild(imported); 
+      var link = document.createElement('link'); 
+      link.rel = 'stylesheet'; 
+      link.type = 'text/css'; 
+      link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
       document.head.appendChild(link);
     }
     importHotmart();
